@@ -1,0 +1,21 @@
+class Student {
+    private:
+        std::vector<int> scores = {};
+        
+    public:
+        void input() {
+            for (int i = 1; i <= 5; i++) {
+                int temp = {};
+                std::cin >> temp;
+                scores.push_back(temp);
+            }
+        };
+        
+        int calculateTotalScore() {
+            int sum {};
+            for (const int s : scores) {
+                sum += s;
+            }
+            return sum;
+        }
+};
