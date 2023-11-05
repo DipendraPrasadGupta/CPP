@@ -1,0 +1,52 @@
+// Single Inheritance //
+#include<iostream>
+using namespace std;
+class person
+{
+	protected:
+		string name;
+		string gender;
+			void getp()
+		{
+			cout<<"Enter your name: ";
+			cin>>name;
+			cout<<"Enter your gender: ";
+			cin>>gender;
+		}
+		void showp()
+		{
+			cout<<"Your name is :"<<name<<endl;
+			cout<<"Your gender is :"<<gender<<endl;
+		}
+
+};
+class student : public person
+{
+	protected:
+		string roll_no;
+		string college;
+	public:
+		void gets()
+		{
+			getp();
+			cout<<"Enter Your ROll No.: ";
+			cin>>roll_no;
+			cout<<"Enter Your College: ";
+			cin>>college;
+		}
+		void shows()
+		{
+			showp();
+			cout<<"Your Roll No.:"<<roll_no<<endl;
+			cout<<"Your College is:"<<college<<endl;
+		}
+
+};
+int main()
+{
+	student s;
+	s.gets();
+	s.shows();
+	return 0;
+
+}
