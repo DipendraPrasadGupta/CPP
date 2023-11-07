@@ -1,0 +1,76 @@
+// Multilevel Inheritance //
+#include<iostream>
+using namespace std;
+class person
+{
+	protected:
+		string name;
+		string gender;
+	public:
+		void getp()
+		{
+			cout<<"Enter your name: ";
+			cin>>name;
+			cout<<"Enter your gender: ";
+			cin>>gender;
+		}
+		void showp()
+		{
+			cout<<"Your name is :"<<name<<endl;
+			cout<<"Your gender is :"<<gender<<endl;
+		}
+
+};
+class student : public person
+{
+	protected:
+		string roll_no;
+		string college;
+	public:
+		void gets()
+		{
+			getp();
+			cout<<"Enter Your ROll No.: ";
+			cin>>roll_no;
+			cout<<"Enter Your College: ";
+			cin>>college;
+		}
+		void shows()
+		{
+			showp();
+			cout<<"Your Roll No.:"<<roll_no<<endl;
+			cout<<"Your College is:"<<college<<endl;
+		}
+
+};
+class Hostel : public student
+{
+	protected:
+		string block;
+		int room_no;
+	public:
+		void geth()
+		{
+			gets();
+			cout<<"Enter Hostel Your Block: ";
+			cin>>block;
+			cout<<"Enter Hostel Your Room_No: ";
+			cin>>room_no;
+		}
+		void showh()
+		{
+			shows();
+			cout<<"Your Hostel Block is: "<<block<<endl;
+			cout<<"Your Hostel Room_No is: "<<room_no<<endl;
+		}
+
+};
+int main()
+{
+	
+	Hostel h;
+	h.geth();
+	h.showh();
+	return 0;
+
+}
