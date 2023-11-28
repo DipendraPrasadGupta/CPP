@@ -1,0 +1,63 @@
+#include<iostream>
+using namespace std;
+class shape
+{
+	public:
+	virtual void area()=0;
+};
+class circle : public shape
+{
+	private:
+		int r;
+	public:
+		void area()
+		{
+			cout<<"Enter the vlaue of r ";
+			cin>>r;
+			cout<<"Area of the circle is : "<<3.14*r*r<<endl;
+		}
+};
+class rectangle : public shape
+{
+	private:
+		int l,b;
+	public:
+		void area()
+		{
+			cout<<"Enter the value of l and b : ";
+			cin>>l>>b;
+			cout<<"The area of the rectangle is : "<<l*b<<endl;
+		}
+};
+class square : public shape
+{
+	private:
+		int side;
+	public:
+		void area()
+		{
+			cout<<"Enter the value of the side : ";
+			cin>>side;
+			cout<<"The area of the square is : "<<side*side<<endl;
+		}
+};
+int main()
+{
+	shape *sptr;
+	circle c;
+	sptr=&c;
+	sptr->area();
+	rectangle r;
+	sptr=&r;
+	sptr->area();
+	square s;
+	sptr=&s;
+	sptr->area();
+	return 0;
+}
+
+
+
+
+
+
