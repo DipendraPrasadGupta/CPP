@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class sample
+{
+	private:
+		int a,b;
+	public:
+		sample ()
+		{
+			cout<<"Enter the value of the a and b: ";
+			cin>>a>>b;
+		}
+		sample (sample &s1)
+		{
+			a=s1.a;
+			b=s1.b;
+		}
+		void show()
+		{
+			cout<<"Output is: "<<a+b<<endl;
+		}
+};
+int main()
+{
+	sample s1;
+	s1.show();
+	cout<<"After copying the output"<<endl;
+	sample s2(s1);
+	s2.show();
+}
