@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class sample 
+{
+	private:
+		int a,b;
+	public:
+		void get()
+		{
+			cout<<"Enter the value of the a and b ";
+			cin>>a>>b;
+		}
+		void show ()
+		{
+			cout<<"A value is "<<a<<endl;
+			cout<<"B value is "<<b<<endl;
+		}
+		void operator --()
+		{
+			--a;
+			--b;
+		}
+};
+int main()
+{
+	sample s;
+	s.get();
+	s.show();
+	--s;
+	cout<<"After using decrement operator "<<endl;
+	s.show();
+	
+}
