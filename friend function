@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class sample 
+{
+	private:
+		int side;
+	public:
+		void get()
+		{
+			cout<<"Enter the value of the side: ";
+			cin>>side;
+		}
+		friend void show (sample &s);
+};
+void show (sample &s)
+{
+	cout<<"Area of the square is :"<<s.side*s.side<<endl;
+}
+int main()
+{
+	sample s;
+	s.get();
+	show(s);
+}
